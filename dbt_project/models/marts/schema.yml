@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: fct_brand_daily_pnl
+    description: "Daily P&L mart per brand."
+    columns:
+      - name: brand_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_orders')
+                field: brand_id
+      - name: net_revenue
+        tests:
+          - not_null
+      - name: net_margin
+        tests:
+          - not_null

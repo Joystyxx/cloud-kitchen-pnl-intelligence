@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: fact_orders
+      - name: fact_payments
+      - name: fact_refunds
+      - name: fact_kitchen_cost_allocation

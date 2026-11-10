@@ -1,0 +1,1 @@
+SELECT * FROM {{ source('raw', 'fact_refunds') }}
